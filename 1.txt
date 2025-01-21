@@ -1,0 +1,58 @@
+#1
+age = int(input("Введіть ваш вік: "))
+days = age * 365
+print(f"Вік у днях: {days}")
+
+#2
+mass = float(input("Введіть масу (кг): "))
+acceleration = float(input("Введіть прискорення (м/с²): "))
+force = mass * acceleration
+print(f"Сила: {force} Н")
+
+#3
+a = float(input("Введіть 1-й коефіцієнт (a): "))
+b = float(input("Введіть 2-й коефіцієнт (b): "))
+c = float(input("Введіть 3-й коефіцієнт (c): "))
+D = b**2 - 4 * a * c
+if D > 0:
+    x1 = (-b + D**0.5) / (2 * a)
+    x2 = (-b - D**0.5) / (2 * a)
+    print(f"Корені рівняння: x1 = {x1}, x2 = {x2}")
+elif D == 0:
+    x = -b / (2 * a)
+    print(f"Рівняння має один корінь: x = {x}")
+else:
+    print("Коренів немає")
+
+#5
+a = float(input("Введіть перше число: "))
+b = float(input("Введіть друге число: "))
+c = float(input("Введіть третє число: "))
+
+print("Найменше число:", min(a, b, c))
+print("Найбільше число:", max(a, b, c))
+
+#6
+def calculate_sum():
+    N = int(input("Введіть натуральне число N (1 ≤ N ≤ 100): "))
+    if 1 <= N <= 100:
+        result = N * (N + 1) // 2
+        print(f"Сума перших {N} натуральних чисел: {result}")
+    else:
+        print("Помилка: число N має бути в діапазоні від 1 до 100.")
+
+if __name__ == "__main__":
+    calculate_sum()
+
+#7
+a = int(input("Введіть перше число: "))
+b = int(input("Введіть друге число: "))
+res = []
+for i in range(a, b + 1):
+    res.append(i)
+print(res)
+
+#8
+a = int(input('Введіть число: '))
+res = a - 1
+print("Попереднє число:", res)
